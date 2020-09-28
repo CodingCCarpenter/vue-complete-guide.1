@@ -1,4 +1,20 @@
-// VANILLA JAVASCRIPT IMPLEMENTATION OF 'addGoal'
+// VUE IMPLEMENTATION OF 'addGoal' 
+Vue.createApp({
+    data() {
+        return {
+            goals: [],
+            enteredValue: ''
+        };
+    },
+    methods: {
+        addGoal() {
+            this.goals.push(this.enteredValue);
+        }
+    }
+}).mount("#app");
+
+
+// VANILLA JAVASCRIPT IMPLEMENTATION OF 'addGoal' (imperative approach)
 
 //--------------START----------------
 
@@ -19,4 +35,3 @@
 
 // ---------------END----------------
 
-// VIEW IMPLEMENTATION OF 'addGoal'
