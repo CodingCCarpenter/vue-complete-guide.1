@@ -6,7 +6,7 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    setName(event, lastName) {
+    setName(event) {
       this.name = event.target.value;
     },
     add(num) {
@@ -17,6 +17,24 @@ const app = Vue.createApp({
     },
     resetInput() {
       this.name = '';
+    },
+    outputFullName() {
+      console.log('running again...');
+      if(this.name === '') {
+        return '';
+      } else {
+        return this.name + ' ' + 'lastName'
+      }
+    }
+  },
+  computed: {
+    fullName() {
+      console.log('running again...');
+      if(this.name === '') {
+        return '';
+      } else {
+        return this.name + ' ' + 'lastName'
+      } 
     }
   }
 });
