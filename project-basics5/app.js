@@ -30,31 +30,31 @@ const app = Vue.createApp({
     }
   },
   computed: {
-    // fullName() {
-    //   console.log('running again...');
-    //   if(this.name === '') {
-    //     return '';
-    //   } else {
-    //     return this.name + ' ' + 'lastName'
-    //   } 
-    // }
-  },
-  watch: {
-    name(value) {
-      if (value === '') {
-        this.fullName = '';
+    fullName() {
+      console.log('running again...');
+      if(this.name === '') {
+        return '';
       } else {
-        this.fullName = value + ' ' + 'Schwarzmuller'
-      }
+        return this.name + ' ' + this.lastName
+      } 
     }
   },
-  lastName(value) {
-    if (value === '') {
-      this.fullName = '';
-    } else {
-      this.fullName = this.name + ' ' + value;
-    }
-  }
+  // watch: {
+  //   name(value) {
+  //     if (value === '') {
+  //       this.fullName = '';
+  //     } else {
+  //       this.fullName = value + ' ' + 'Schwarzmuller'
+  //     }
+  //   }
+  // },
+  // lastName(value) {
+  //   if (value === '') {
+  //     this.fullName = '';
+  //   } else {
+  //     this.fullName = this.name + ' ' + value;
+  //   }
+  // }
 });
 
 app.mount('#events');
