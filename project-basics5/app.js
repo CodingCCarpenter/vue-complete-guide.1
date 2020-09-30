@@ -39,7 +39,13 @@ const app = Vue.createApp({
       } 
     }
   },
-  // watch: {
+  watch: {
+    counter(value) {
+      if (value > 50) {
+        this.counter = 0;
+      }
+    }
+  // COULD REPLACE COMPUTED PROPERTY fullName()
   //   name(value) {
   //     if (value === '') {
   //       this.fullName = '';
@@ -54,7 +60,7 @@ const app = Vue.createApp({
   //   } else {
   //     this.fullName = this.name + ' ' + value;
   //   }
-  // }
+  }
 });
 
 app.mount('#events');
