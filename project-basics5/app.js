@@ -32,7 +32,7 @@ const app = Vue.createApp({
   computed: {
     fullName() {
       console.log('running again...');
-      if(this.name === '') {
+      if(this.name === '' || this.lastName === '') {
         return '';
       } else {
         return this.name + ' ' + this.lastName
