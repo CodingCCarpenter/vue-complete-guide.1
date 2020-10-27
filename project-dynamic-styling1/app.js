@@ -6,6 +6,7 @@ const app = Vue.createApp({
             boxCSelected: false,
         };
     },
+
     methods: {
         boxSelected(box) {
             if (box === 'A') {
@@ -17,9 +18,11 @@ const app = Vue.createApp({
             };
         }
     },
+
     computed: {
 
     },
+    
     watch: {
 
     }
